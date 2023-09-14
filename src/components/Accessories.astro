@@ -1,0 +1,23 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section 
+    title="Accessories"
+    color="black"
+    pb="1"
+    gap="9">
+        <div 
+            slot="footer"
+            class="relative flex flex-col flex-grow justify-end pb-5 gap-9">
+            <div class="flex text-center justify-center gap-7">
+                <a class="text-base font-semibold backdrop-blur-sm bg-white/75 rounded-md px-[86px] py-2 text-gray-900 flex-row hover:bg-zinc-800/75 hover:text-white transition-colors" href="#">Shop Now</a>
+            </div>
+            
+        </div>
+        <img
+            slot="background" 
+            class="object-center object-cover h-full w-full" 
+            src="/Accessories.webp"></img>
+</Section>
+

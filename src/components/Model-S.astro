@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+import Taxes from "./FooterTax.astro";
+---
+
+<Section 
+    title="Model S"
+    subtitle="From $71,090*"
+    taxesI="After Est. Gas Savings"
+    color="black"
+    pb="1"
+    gap="9">
+        <div 
+            slot="footer"
+            class="relative flex flex-col flex-grow justify-end pb-1 gap-9">
+            <div class="hidden sm:flex text-center justify-center gap-7">
+                <a class="text-base font-semibold backdrop-blur-sm bg-white/75 rounded-md px-[86px] py-2 text-gray-900 flex-row hover:bg-zinc-800/75 hover:text-white transition-colors" href="#">Order Now</a>
+                <a class="text-base font-semibold backdrop-blur-sm bg-zinc-800/75 rounded-md px-[86px] py-2 text-white flex-row hover:bg-white/75 hover:text-gray-900 transition-colors" href="#">Demo Drive</a>
+            </div>
+            <a class="text-base font-semibold backdrop-blur-sm bg-white/75 rounded-md mx-24 py-2 text-gray-900 flex-row hover:bg-zinc-800/75 hover:text-white transition-colors sm:hidden" href="#">Order Now</a>
+                <a class="text-base font-semibold backdrop-blur-sm bg-zinc-800/75 rounded-md 
+                mx-24 py-2 text-white flex-row hover:bg-white/75 hover:text-gray-900 transition-colors sm:hidden" href="#">Demo Drive</a>
+        
+            <Taxes
+                TitleT="Price before savings is "
+                Tax="$74,990"
+                SubTitleT="excluding taxes and fees. Subject to change."
+                 />
+        </div>
+        <img
+            slot="background" 
+            class="object-center object-cover h-full w-full" 
+            src="/Model-S.webp"></img>
+</Section>
+

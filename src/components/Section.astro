@@ -1,0 +1,37 @@
+---
+const {color, title, subtitle, taxesI, pb, gap } = Astro.props
+const textColor = `text-${color}`
+const pbotton = `pb-${pb}`
+const gline = `gap-${gap}`
+---
+
+<section 
+    class="landing-section bg-white h-screen w-screen text-center relative overflow-hidden"
+    data-header-color={color}
+    >
+
+    <div class="z-30 relative h-full flex flex-col">
+        <header class="flex flex-col relative">
+            <h1 class={`${textColor} pt-40 sm:pt-80 text-[40px] font-medium`}>
+                {title}
+            </h1>
+            <p class={`${textColor} text-xl`}>{subtitle}</p>
+            <p class={`${textColor} text-xs`}>{taxesI}</p>
+        </header>
+                
+        <footer class={`relative flex flex-col flex-grow justify-end ${pbotton} ${gline}`}>
+            <div class={`${textColor}`}>
+                <slot name="footer" />
+                
+            </div>
+            
+        </footer>
+    </div>
+    <div class="absolute top-0 bottom-0 h-full w-full z-10">
+        <div class="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-transparent to whitespace"></div>
+        <slot name="background" />
+        
+    </div>
+    
+
+</section>

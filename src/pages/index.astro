@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/HeaderT.astro";
+import Model3 from "../components/Model-3.astro";
+import ExperienceT from "../components/ExperienceT.astro";
+import ModelY from "../components/Model-Y.astro";
+import ModelS from "../components/Model-S.astro";
+import ModelX from "../components/Model-X.astro";
+import Powerwall from "../components/Powerwall.astro";
+import Accessories from "../components/Accessories.astro";
+---
+
+<Layout title="Tesla">
+	<Header />
+  <main class="scroll-smooth snap-y snap-mandatory relative w-full h-screen overflow-auto overflow-x-hidden overflow-hidden">
+	<div class="snap-center">
+		<Model3 />
+	</div>
+	<div class="snap-center">
+		<ModelY />
+	</div>
+	<div class="snap-center">
+		<ModelS />
+	</div>
+	<div class="snap-center">
+		<ModelX />
+	</div>
+	<div class="snap-center">
+		<ExperienceT />
+	</div>
+	<div class="snap-center">
+		<Powerwall />
+	</div>
+	<div class="snap-center">
+		<Accessories />
+	</div>
+
+  </main>
+</Layout>
